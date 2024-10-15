@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.container_principalHeader {
+  width: 100vw;
+  height: 8vh;
+  background-color: #1e3f72;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container_contentHeader {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: .4rem;
+}
+
+.headerSearch {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vh;
+}
+
+.inputHeader {
+  border-radius: .4rem;
+  border: none;
+  padding: .4rem;
+  outline: none;
+  font-size: 1.7vh;
+  height: 2vh;
+  width: 20vw;
+}
+
+.buttonSearch {
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: .4rem;
+  padding: .4rem;
+  width: 10vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease;
+}
+
+.buttonSearch:hover {
+  cursor: pointer;
+  background-color: #4a6994;
+  transition: .2s ease;
+}
+
+.header_buttonAdd {
+  width: 20vw;
+  padding: .4rem;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  border-radius: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease;
+}
+
+.header_buttonAdd:hover {
+  cursor: pointer;
+  background-color: #4a6994;
+  transition: .2s ease;
+}
