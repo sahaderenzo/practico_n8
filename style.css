@@ -1,9 +1,11 @@
+/*GENERALES*/
 * {
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
 }
 
+/*HEADER*/
 .container_principalHeader {
   width: 100vw;
   height: 8vh;
@@ -73,4 +75,20 @@
   cursor: pointer;
   background-color: #4a6994;
   transition: .2s ease;
+}
+
+/*MAIN*/
+.container_view {
+  display: grid;
+  grid-template-columns: .2fr .8fr;
+}
+
+.list {
+  background-color: aqua;
+  height: 92vh;
+}
+
+.store {
+  height: 92vh;
+  background-color: rebeccapurple;
 }
