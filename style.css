@@ -83,12 +83,48 @@
   grid-template-columns: .2fr .8fr;
 }
 
-.list {
-  background-color: aqua;
+.listAside {
   height: 92vh;
 }
 
 .store {
   height: 92vh;
   background-color: rebeccapurple;
+}
+
+/*LISTASIDE*/
+.listAside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listAside h2 {
+  display: flex;
+  font-size: 3vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.listAside ul {
+  margin-top: 3vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 1vh;
+}
+
+.listAside ul li {
+  font-size: 2vh;
+  font-weight: 500;
+  padding: .4rem;
+  border-radius: .4rem;
+}
+
+.liActive {
+  background-color: #1e3f72;
+  color: white;
 }
