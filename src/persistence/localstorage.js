@@ -25,6 +25,6 @@ export const setInLocalStorage = (productIn) => {
         prodcutInLocal.push(productIn);
     }
 
-    localStorage.setItem("products", JSON.parse(prodcutInLocal));
+    localStorage.setItem("products", JSON.stringify(prodcutInLocal));
 
 }

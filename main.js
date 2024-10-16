@@ -1,3 +1,4 @@
+import { setInLocalStorage } from "./src/persistence/localstorage";
 import { renderCategories } from "./src/services/categories";
 import './style.css';
 
@@ -44,12 +45,15 @@ const handleSaveOrModifyElements = () => {
         precio = document.getElementById("precio").value,
         categories = document.getElementById("categoria").value;
 
-    console.log({
+    let object = {
+        id: new Date().toISOString(),
         nombre,
         imagen,
         precio,
-        categories
-    });
+        categories,
+    };
+
+    setInLocalStorage(object);
 
     closeModel();
 };
