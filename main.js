@@ -57,6 +57,6 @@ const handleSaveOrModifyElements = () => {
     };
 
     setInLocalStorage(object);
-
+    handleGetProductsToStore();
     closeModel();
 };

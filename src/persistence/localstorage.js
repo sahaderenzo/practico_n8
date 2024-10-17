@@ -13,18 +13,19 @@ export const handleGetProductLocalStorage = () => {
 
 //Guardar productos
 export const setInLocalStorage = (productIn) => {
-    let prodcutInLocal = handleGetProductLocalStorage();
+    if (productIn) {
+        let prodcutInLocal = handleGetProductLocalStorage();
 
-    const existingIndex = prodcutInLocal.findIndex((prodcutInLocal) =>
-        prodcutInLocal.id !== productIn
-    );
+        const existingIndex = prodcutInLocal.findIndex((prodcutInLocal) =>
+            prodcutInLocal.id === productIn.id
+        );
 
-    if (existingIndex !== -1) {
-        prodcutInLocal[existingIndex] = productIn;
-    } else {
-        prodcutInLocal.push(productIn);
+        if (existingIndex !== -1) {
+            prodcutInLocal[existingIndex] = productIn;
+        } else {
+            prodcutInLocal.push(productIn);
+        }
+
+        localStorage.setItem("products", JSON.stringify(prodcutInLocal));
     }
-
-    localStorage.setItem("products", JSON.stringify(prodcutInLocal));
-
 }
