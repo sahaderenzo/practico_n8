@@ -1,6 +1,6 @@
 // ======================= PRODUCTOS
 
-import { setInLocalStorage } from "../persistence/localStorage";
+import { handleGetProductLocalStorage, setInLocalStorage } from "../persistence/localStorage";
 import { closeModel } from "../views/modal";
 import { handleGetProductsToStore } from "../views/store";
 import { productoActivo } from "../../main";
@@ -38,3 +38,12 @@ export const handleSaveOrModifyElements = () => {
     handleGetProductsToStore();
     closeModel();
 };
+
+export const handleDeleteProduct = () => {
+    const products = handleGetProductLocalStorage();
+    const result = products.filter((el) => el.id !== productoActivo.id);
+    localStorage.setItem("products", JSON.stringify(result));
+    const newproducts = handleGetProductLocalStorage();
+    handleGetProductsToStore(newproducts);
+    closeModel();
+}
