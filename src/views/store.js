@@ -1,13 +1,14 @@
-//STORE
-import { openModel, setProductoActivo } from "../../main";
-import { handleGetProductLocalStorage } from "../persistence/localStorage"
+
+import { handleGetProductLocalStorage } from "../persistence/localStorage";
+import { setProductoActivo } from "../../main";
+import { openModel } from "./modal";
+
+
 
 //Funcion que trae los elementos y llama al render
 export const handleGetProductsToStore = () => {
-
     const products = handleGetProductLocalStorage();
     handleRenderList(products);
-
 }
 
 //Filtra y renderiza la sección con sus respectivos elementos
