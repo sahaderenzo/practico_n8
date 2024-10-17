@@ -1,4 +1,5 @@
 //STORE
+import { openModel, setProductoActivo } from "../../main";
 import { handleGetProductLocalStorage } from "../persistence/localStorage"
 
 //Funcion que trae los elementos y llama al render
@@ -61,7 +62,8 @@ export const handleRenderList = (products) => {
         products.forEach((element, index) => {
             const productContainer = document.getElementById(`product-${element.categories}-${index}`);
             productContainer.addEventListener('click', () => {
-                console.log("productoActivo", element)
+                setProductoActivo(element);
+                openModel();
             })
         });
     }

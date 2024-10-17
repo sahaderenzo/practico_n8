@@ -131,6 +131,13 @@
   box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
   background-color: white;
   border-radius: .4rem;
+  transition: .2s ease;
+}
+
+.containerTargetItem:hover {
+  transform: scale(1.1);
+  transition: .2s ease;
+  cursor: pointer;
 }
 
 .containerTargetItem h2 {
@@ -181,6 +188,13 @@
   font-weight: 500;
   padding: .4rem;
   border-radius: .4rem;
+}
+
+.listAside ul li:hover {
+  cursor: pointer;
+  background-color: #425778;
+  transition: .2s ease;
+  color: white;
 }
 
 .liActive {
@@ -244,6 +258,10 @@
   padding: .6rem;
   border: none;
   border-radius: .4rem;
+}
+
+.buttonPopUP:hover {
+  cursor: pointer;
 }
 
 .cancel {
