@@ -154,7 +154,8 @@
 }
 
 .sectionStore img {
-  width: 11vw;
+  height: 20vh;
+  width: 10vw;
   border-radius: .4rem;
 }
 
@@ -274,4 +275,30 @@
 
 .delete {
   background-color: rgb(207, 45, 45);
+}
+
+@media screen and (min-width: 990px) {
+  .containerProductStore {
+    grid-template-columns: repeat(4, .6fr);
+  }
+
+  .containerTargetItem {
+    width: 15vw;
+  }
+}
+
+::-webkit-scrollbar {
+  width: .7rem;
+  background-color: #fff;
+  border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e3f72;
+  border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4f627e;
+  border-radius: .4rem;
 }
